@@ -1,1 +1,33 @@
-<h1>Hola!!!</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <style>
+            table, th, td {
+                border: 1px solid;
+            }
+        </style>
+        <h1>Items</h1>
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Proveedor</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.provider.name}}</td>
+                </tr>    
+            
+            {% endfor %}
+        
+        </table>
+
+    </body>
+
+</html>
